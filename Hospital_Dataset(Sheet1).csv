@@ -1,0 +1,301 @@
+Timestamp,Stress_State,Patient_HR,BP_Systolic,BP_Diastolic,RR,SpO2,Temp,Pain,Chief_Complaint,Modifier,Alarm_Note
+00:00:00,Normal,76,119,79,17,98.3,36.9,2,Fever,Elderly,None
+00:01:00,Normal,73,118,83,15,98.5,37.2,3,Headache,ICU patient,Minor alert
+00:02:00,Normal,80,120,74,14,98.9,37,1,Sepsis,On oxygen,Minor alert
+00:03:00,Normal,81,123,77,15,98.7,36.9,1,Dyspnea,ICU patient,Minor alert
+00:04:00,Normal,81,121,76,19,98.7,37.2,1,Abdominal pain,Post-op,Minor alert
+00:05:00,Normal,74,124,78,18,97.6,36.9,1,Trauma,On oxygen,None
+00:06:00,Normal,83,123,83,15,97.6,36.4,0,Headache,Diabetic,None
+00:07:00,Normal,77,118,77,18,99.7,36.9,1,Abdominal pain,Post-op,None
+00:08:00,Normal,77,113,75,15,96.6,36.8,1,Abdominal pain,Post-op,None
+00:09:00,Normal,80,119,79,17,96.1,36.7,3,Sepsis,Post-op,Minor alert
+00:10:00,Normal,75,125,79,19,97.6,36.9,1,Headache,Diabetic,Minor alert
+00:11:00,Normal,80,119,77,17,98.7,36.5,1,Abdominal pain,Hypertensive,None
+00:12:00,Normal,68,114,80,15,98.7,36.7,3,Abdominal pain,Elderly,None
+00:13:00,Normal,76,119,73,15,97.8,37.1,3,Sepsis,ICU patient,Minor alert
+00:14:00,Normal,84,122,78,15,97.1,36.5,2,Dyspnea,Elderly,None
+00:15:00,Normal,68,123,76,16,98,36.9,2,Trauma,Hypertensive,Minor alert
+00:16:00,Normal,74,123,76,13,97.1,36.9,0,Abdominal pain,Elderly,Minor alert
+00:17:00,Normal,78,115,75,16,98.8,37.1,0,Dyspnea,Elderly,Minor alert
+00:18:00,Normal,78,123,80,15,99.6,37.3,3,Headache,Post-op,Minor alert
+00:19:00,Normal,74,119,79,16,98.7,36.8,0,Chest pain,On oxygen,Minor alert
+00:20:00,Normal,75,117,75,18,100,36.8,1,Headache,Post-op,None
+00:21:00,Normal,75,121,77,17,95.9,37.4,3,Fever,On oxygen,Minor alert
+00:22:00,Normal,69,120,77,16,97.6,36.8,2,Sepsis,ICU patient,Minor alert
+00:23:00,Normal,71,126,77,16,98.9,36.9,1,Fever,Diabetic,None
+00:24:00,Normal,74,119,79,15,98.4,37,2,Headache,Diabetic,None
+00:25:00,Normal,75,121,74,16,96.9,37.2,0,Fever,Post-op,None
+00:26:00,Normal,65,123,78,14,98.8,36.8,0,Chest pain,On oxygen,None
+00:27:00,Normal,76,121,81,16,97.8,37,1,Chest pain,ICU patient,Minor alert
+00:28:00,Normal,74,122,79,15,96.5,36.7,2,Sepsis,Diabetic,Minor alert
+00:29:00,Normal,68,114,75,18,96.4,36.8,0,Headache,ICU patient,None
+00:30:00,Normal,73,119,74,16,99.3,37,0,Headache,Elderly,None
+00:31:00,Normal,79,118,71,19,96.6,36.5,0,Chest pain,Unstable,None
+00:32:00,Normal,74,114,80,13,98.9,37,2,Abdominal pain,Post-op,None
+00:33:00,Normal,73,121,77,16,98,36.7,3,Abdominal pain,ICU patient,Minor alert
+00:34:00,Normal,85,120,77,17,97.2,36.9,1,Headache,Diabetic,Minor alert
+00:35:00,Normal,70,123,75,15,98.6,36.7,1,Dyspnea,Unstable,None
+00:36:00,Normal,72,121,79,15,97.2,36.8,1,Trauma,ICU patient,None
+00:37:00,Normal,72,120,78,16,99.2,36.9,1,Headache,On oxygen,None
+00:38:00,Normal,81,121,74,16,98.7,36.8,3,Abdominal pain,Post-op,Minor alert
+00:39:00,Normal,68,117,75,17,97.7,37.1,1,Sepsis,Hypertensive,None
+00:40:00,Normal,77,122,76,14,97.6,36.7,3,Dyspnea,Diabetic,None
+00:41:00,Normal,73,121,80,18,96.5,36.9,1,Chest pain,On oxygen,Minor alert
+00:42:00,Normal,72,120,76,15,99.7,37,1,Sepsis,Diabetic,None
+00:43:00,Normal,83,118,78,18,97.6,36.8,3,Dyspnea,Post-op,None
+00:44:00,Normal,80,125,73,14,99.2,36.5,0,Trauma,Post-op,Minor alert
+00:45:00,Normal,71,120,75,16,99,36.9,1,Sepsis,On oxygen,Minor alert
+00:46:00,Normal,69,122,74,15,97.9,36.7,1,Headache,Unstable,Minor alert
+00:47:00,Normal,83,121,75,15,98.6,36.9,0,Dyspnea,ICU patient,None
+00:48:00,Moderate,101,142,90,21,94.7,37.4,4,Abdominal pain,On oxygen,Elevated BP alert
+00:49:00,Moderate,92,138,89,23,92.9,37.6,5,Sepsis,On oxygen,Elevated BP alert
+00:50:00,Moderate,98,139,90,22,94.2,37.7,5,Abdominal pain,Hypertensive,Moderate tachycardia
+00:51:00,Moderate,97,139,88,21,92.3,37.4,4,Chest pain,Diabetic,Low SpO2 warning
+00:52:00,Moderate,96,135,93,21,94.3,37.5,6,Fever,ICU patient,Moderate tachycardia
+00:53:00,Moderate,101,146,90,20,94.4,37,4,Sepsis,Hypertensive,Low SpO2 warning
+00:54:00,Moderate,100,139,90,22,92.8,37.7,4,Chest pain,Elderly,Moderate tachycardia
+00:55:00,Moderate,96,138,90,22,93.6,37.6,4,Dyspnea,Elderly,Moderate tachycardia
+00:56:00,Moderate,103,139,89,22,91,37.5,4,Abdominal pain,Unstable,Low SpO2 warning
+00:57:00,Moderate,96,141,91,19,93.4,37.5,4,Dyspnea,ICU patient,Moderate tachycardia
+00:58:00,Moderate,99,139,88,23,94.6,37.1,5,Headache,Elderly,Low SpO2 warning
+00:59:00,Moderate,96,140,89,22,93.1,37.4,6,Fever,Unstable,Low SpO2 warning
+01:00:00,Moderate,99,137,92,23,92.8,37.4,4,Chest pain,Post-op,Low SpO2 warning
+01:01:00,Moderate,99,147,88,22,93.4,37.7,4,Chest pain,Unstable,Elevated BP alert
+01:02:00,Moderate,98,133,88,22,93.9,37.5,6,Headache,ICU patient,Elevated BP alert
+01:03:00,Moderate,96,132,89,22,92,37.5,4,Fever,Unstable,Elevated BP alert
+01:04:00,Moderate,98,143,90,22,94.3,37.2,4,Chest pain,Hypertensive,Moderate tachycardia
+01:05:00,Moderate,95,140,92,21,91.2,37.4,4,Dyspnea,Unstable,Low SpO2 warning
+01:06:00,Moderate,101,139,89,23,92.9,37.9,4,Abdominal pain,On oxygen,Low SpO2 warning
+01:07:00,Moderate,98,139,91,21,93.5,37.8,6,Dyspnea,Hypertensive,Low SpO2 warning
+01:08:00,Moderate,94,139,90,23,93.5,37.6,4,Fever,Hypertensive,Elevated BP alert
+01:09:00,Moderate,100,142,86,22,93.7,37.5,6,Trauma,Elderly,Elevated BP alert
+01:10:00,Moderate,95,134,92,22,93.4,37.4,6,Chest pain,Hypertensive,Elevated BP alert
+01:11:00,Moderate,100,138,88,23,93.2,37.4,5,Abdominal pain,Unstable,Low SpO2 warning
+01:12:00,Moderate,97,140,90,22,93.2,37.6,6,Chest pain,Hypertensive,Elevated BP alert
+01:13:00,Moderate,98,141,92,22,94,37.7,6,Chest pain,Unstable,Moderate tachycardia
+01:14:00,Moderate,96,141,91,20,92.4,37.4,5,Fever,On oxygen,Elevated BP alert
+01:15:00,Moderate,98,142,90,22,94.2,37.4,4,Fever,Post-op,Moderate tachycardia
+01:16:00,Moderate,102,142,91,23,94.6,37.3,4,Sepsis,Elderly,Moderate tachycardia
+01:17:00,Moderate,97,140,91,22,93.5,37.2,4,Sepsis,Unstable,Elevated BP alert
+01:18:00,Moderate,101,138,91,23,93.7,37.3,4,Fever,ICU patient,Low SpO2 warning
+01:19:00,Moderate,96,142,90,22,94.3,37.3,4,Abdominal pain,Hypertensive,Elevated BP alert
+01:20:00,Moderate,96,138,91,23,94.6,37.3,5,Abdominal pain,ICU patient,Low SpO2 warning
+01:21:00,Moderate,95,141,92,21,93.4,37.5,5,Sepsis,On oxygen,Elevated BP alert
+01:22:00,Moderate,98,141,91,23,94.1,37.6,5,Dyspnea,Hypertensive,Moderate tachycardia
+01:23:00,Moderate,96,133,91,22,91.8,37.8,4,Fever,Diabetic,Elevated BP alert
+01:24:00,Moderate,97,136,91,22,95.3,37.5,4,Chest pain,Hypertensive,Moderate tachycardia
+01:25:00,Moderate,101,146,93,23,94.5,37.6,6,Chest pain,Post-op,Elevated BP alert
+01:26:00,Normal,70,121,80,17,98.1,37.1,0,Dyspnea,ICU patient,None
+01:27:00,Normal,72,117,75,15,98.5,36.6,2,Sepsis,ICU patient,None
+01:28:00,Normal,78,122,75,15,97.9,37.3,2,Trauma,Post-op,Minor alert
+01:29:00,Normal,73,116,76,17,99.9,37.2,0,Dyspnea,Diabetic,Minor alert
+01:30:00,Normal,76,120,78,14,99.7,37.2,1,Dyspnea,Hypertensive,None
+01:31:00,Normal,65,120,80,15,97.6,36.9,0,Sepsis,Unstable,None
+01:32:00,Normal,78,119,79,17,98.1,36.9,3,Sepsis,Diabetic,Minor alert
+01:33:00,Normal,71,121,75,16,98.8,37.1,3,Abdominal pain,Unstable,None
+01:34:00,Normal,70,116,74,13,97.5,37,0,Headache,ICU patient,None
+01:35:00,Normal,72,119,77,14,96.2,36.6,2,Chest pain,Diabetic,Minor alert
+01:36:00,Normal,78,117,74,16,97.7,37,1,Sepsis,Elderly,Minor alert
+01:37:00,Normal,67,118,79,14,98.3,36.6,2,Trauma,Diabetic,None
+01:38:00,Normal,76,119,75,15,98.5,37.2,3,Headache,On oxygen,Minor alert
+01:39:00,Normal,73,120,78,18,97.9,36.7,0,Sepsis,Diabetic,Minor alert
+01:40:00,Normal,69,119,74,16,99.6,36.8,3,Fever,Elderly,None
+01:41:00,Normal,75,117,77,17,97.4,36.7,3,Headache,Post-op,Minor alert
+01:42:00,Normal,82,120,78,14,97.5,36.7,0,Abdominal pain,Diabetic,Minor alert
+01:43:00,Normal,76,119,77,15,98.1,37,3,Fever,Diabetic,None
+01:44:00,Normal,72,124,71,14,97.9,36.7,2,Dyspnea,On oxygen,Minor alert
+01:45:00,Normal,75,115,79,15,99.9,37.1,2,Abdominal pain,Unstable,Minor alert
+01:46:00,Normal,69,121,77,17,100,36.5,1,Dyspnea,Unstable,None
+01:47:00,Normal,79,118,76,16,97.5,36.7,0,Chest pain,Hypertensive,None
+01:48:00,Normal,78,121,80,15,98.3,36.7,2,Dyspnea,Hypertensive,None
+01:49:00,Normal,74,121,74,16,97.8,37,2,Headache,On oxygen,Minor alert
+01:50:00,Normal,76,117,76,16,98.3,36.8,3,Sepsis,Hypertensive,None
+01:51:00,Normal,76,121,82,16,97.7,36.5,2,Headache,Unstable,Minor alert
+01:52:00,Normal,68,123,79,15,98.1,37.1,3,Chest pain,Hypertensive,Minor alert
+01:53:00,Normal,79,121,76,15,97.6,36.7,2,Chest pain,Elderly,None
+01:54:00,Normal,77,115,82,13,98.8,37,1,Abdominal pain,Unstable,None
+01:55:00,Normal,75,120,78,14,99.2,36.6,3,Headache,Post-op,None
+01:56:00,Normal,70,121,79,15,97.4,36.6,0,Trauma,Elderly,Minor alert
+01:57:00,Normal,77,120,78,16,98.6,37.1,1,Trauma,Unstable,Minor alert
+01:58:00,Normal,79,121,73,14,97.4,36.6,1,Headache,ICU patient,Minor alert
+01:59:00,Normal,76,119,77,14,97.8,36.9,3,Trauma,Post-op,None
+02:00:00,Normal,77,122,80,18,98.6,37.3,2,Sepsis,Unstable,Minor alert
+02:01:00,Normal,76,126,76,15,98,36.8,0,Dyspnea,Post-op,Minor alert
+02:02:00,Normal,78,117,75,16,96.8,36.6,3,Fever,ICU patient,Minor alert
+02:03:00,Normal,78,117,77,15,97.3,36.9,3,Chest pain,Elderly,None
+02:04:00,Normal,74,114,77,18,96.9,36.8,2,Chest pain,ICU patient,Minor alert
+02:05:00,Normal,74,123,81,17,99.6,37,3,Chest pain,Hypertensive,None
+02:06:00,Normal,70,121,79,15,97.8,36.5,0,Abdominal pain,Elderly,Minor alert
+02:07:00,Normal,86,120,77,15,97.6,36.4,1,Chest pain,Hypertensive,None
+02:08:00,Normal,74,121,71,13,100.3,36.7,1,Trauma,On oxygen,Minor alert
+02:09:00,Normal,67,122,77,14,97.7,36.7,0,Sepsis,Elderly,None
+02:10:00,Normal,67,118,76,15,98.8,36.7,0,Trauma,Elderly,Minor alert
+02:11:00,Normal,70,120,77,13,98,37.1,2,Chest pain,Elderly,Minor alert
+02:12:00,Normal,74,118,81,15,98.3,37,0,Abdominal pain,Unstable,Minor alert
+02:13:00,Normal,67,122,76,16,99.6,37,1,Abdominal pain,Unstable,Minor alert
+02:14:00,Normal,80,121,75,16,99.1,37.3,0,Fever,Hypertensive,Minor alert
+02:15:00,Normal,77,119,80,17,99.2,36.5,1,Headache,Hypertensive,Minor alert
+02:16:00,Normal,69,120,78,14,98.2,37.2,2,Headache,ICU patient,Minor alert
+02:17:00,Normal,69,120,77,15,97.9,36.5,0,Trauma,Elderly,Minor alert
+02:18:00,Normal,78,119,76,16,99.3,36.8,1,Fever,Unstable,None
+02:19:00,Normal,77,122,82,15,97.1,36.6,1,Trauma,Post-op,None
+02:20:00,Normal,67,121,75,13,99.5,36.9,2,Abdominal pain,Unstable,None
+02:21:00,Normal,78,114,80,13,99,37.1,2,Abdominal pain,On oxygen,None
+02:22:00,Normal,68,120,76,16,98.2,36.4,1,Fever,Elderly,None
+02:23:00,Normal,67,124,77,15,99.1,36.6,0,Abdominal pain,Elderly,None
+02:24:00,Normal,81,120,81,18,98,36.9,0,Chest pain,On oxygen,None
+02:25:00,Normal,72,119,77,15,97.7,37.2,1,Sepsis,On oxygen,None
+02:26:00,Normal,75,119,73,14,95.4,36.6,1,Sepsis,Hypertensive,None
+02:27:00,Normal,67,115,78,13,98.2,36.6,1,Trauma,Post-op,None
+02:28:00,Normal,72,117,76,17,98.5,37,1,Fever,ICU patient,None
+02:29:00,Normal,74,118,72,16,96.9,36.9,2,Headache,Unstable,None
+02:30:00,Normal,76,118,79,15,97.1,37.1,1,Chest pain,Hypertensive,Minor alert
+02:31:00,Normal,84,123,76,14,98,36.7,3,Sepsis,On oxygen,Minor alert
+02:32:00,Normal,83,125,76,13,97.3,36.9,3,Fever,On oxygen,Minor alert
+02:33:00,Normal,78,118,78,15,99.1,36.8,2,Dyspnea,ICU patient,None
+02:34:00,Normal,74,113,84,17,100.1,36.6,3,Sepsis,ICU patient,None
+02:35:00,Normal,88,119,80,15,98.4,37.1,0,Dyspnea,Elderly,Minor alert
+02:36:00,Normal,75,119,74,17,97.2,36.6,2,Chest pain,Hypertensive,Minor alert
+02:37:00,Normal,77,110,79,16,98,36.8,0,Fever,Elderly,Minor alert
+02:38:00,Normal,86,121,80,16,99.2,36.7,1,Sepsis,Diabetic,Minor alert
+02:39:00,Normal,72,122,78,16,98.4,36.7,0,Fever,Diabetic,Minor alert
+02:40:00,Normal,77,121,78,16,97.8,36.7,1,Chest pain,Hypertensive,Minor alert
+02:41:00,Normal,74,117,75,15,97.2,36.8,3,Trauma,Hypertensive,Minor alert
+02:42:00,Moderate,102,142,91,23,93.4,37.2,5,Abdominal pain,Hypertensive,Low SpO2 warning
+02:43:00,Moderate,97,138,89,21,94.4,37.4,5,Abdominal pain,Elderly,Elevated BP alert
+02:44:00,Moderate,96,138,90,22,93.7,37.7,5,Trauma,Hypertensive,Elevated BP alert
+02:45:00,Moderate,98,141,92,21,90.5,37.5,5,Chest pain,Post-op,Moderate tachycardia
+02:46:00,Moderate,98,144,91,24,91.9,37.5,4,Sepsis,Elderly,Low SpO2 warning
+02:47:00,Moderate,98,144,88,22,92.8,37.7,6,Trauma,Elderly,Moderate tachycardia
+02:48:00,Moderate,99,143,89,21,94.2,37.7,5,Abdominal pain,On oxygen,Moderate tachycardia
+02:49:00,Moderate,97,140,91,21,92.8,37.4,4,Trauma,Elderly,Moderate tachycardia
+02:50:00,Moderate,98,137,90,23,91.6,37.3,6,Chest pain,Unstable,Low SpO2 warning
+02:51:00,Moderate,98,138,86,22,94.9,37.7,5,Sepsis,Elderly,Elevated BP alert
+02:52:00,Moderate,97,138,90,22,92.8,37.4,6,Fever,ICU patient,Elevated BP alert
+02:53:00,Moderate,103,139,86,22,93.4,37.7,5,Chest pain,Hypertensive,Low SpO2 warning
+02:54:00,Moderate,100,142,90,21,95.1,37.4,4,Abdominal pain,Diabetic,Elevated BP alert
+02:55:00,Moderate,97,147,90,22,94.5,37.8,5,Headache,Post-op,Elevated BP alert
+02:56:00,Moderate,99,139,91,22,93.2,37.9,4,Trauma,Diabetic,Elevated BP alert
+02:57:00,Moderate,97,142,89,22,93.5,37.3,6,Trauma,Post-op,Elevated BP alert
+02:58:00,Moderate,94,136,90,20,94.3,37,5,Fever,Elderly,Moderate tachycardia
+02:59:00,Normal,79,116,81,15,96.3,36.8,0,Fever,Elderly,None
+03:00:00,Normal,77,120,79,16,97.6,36.7,3,Dyspnea,ICU patient,Minor alert
+03:01:00,Normal,68,115,75,16,99,37.2,3,Headache,On oxygen,Minor alert
+03:02:00,Normal,79,115,79,16,95.7,36.7,3,Fever,Unstable,Minor alert
+03:03:00,Normal,76,121,77,16,97.3,36.8,3,Fever,Post-op,None
+03:04:00,Normal,75,120,74,15,97.6,36.8,1,Trauma,Hypertensive,None
+03:05:00,Normal,72,122,79,16,98.4,36.6,0,Headache,On oxygen,Minor alert
+03:06:00,Normal,78,119,76,13,98.3,37,1,Chest pain,Elderly,None
+03:07:00,Normal,77,120,73,15,97.9,36.7,1,Chest pain,Post-op,Minor alert
+03:08:00,Normal,66,120,82,16,97.8,36.8,1,Fever,Hypertensive,Minor alert
+03:09:00,Normal,76,125,77,14,99.1,36.9,3,Headache,On oxygen,None
+03:10:00,Normal,77,121,77,16,97.6,36.5,2,Trauma,Diabetic,None
+03:11:00,Normal,72,118,78,17,99.4,36.7,2,Abdominal pain,Post-op,Minor alert
+03:12:00,Normal,77,120,75,16,99.8,36.8,2,Headache,Post-op,None
+03:13:00,Normal,73,114,78,16,99.1,36.9,3,Trauma,ICU patient,Minor alert
+03:14:00,Normal,78,119,79,14,97.3,36.6,1,Chest pain,Post-op,None
+03:15:00,Normal,81,120,75,14,98.9,36.8,0,Headache,On oxygen,Minor alert
+03:16:00,Normal,73,117,79,15,97.4,37.1,3,Abdominal pain,ICU patient,Minor alert
+03:17:00,Normal,74,117,79,14,96.2,37.2,0,Sepsis,ICU patient,Minor alert
+03:18:00,Normal,71,118,73,16,98.2,36.8,0,Abdominal pain,ICU patient,Minor alert
+03:19:00,Normal,73,115,78,18,96.2,36.7,2,Chest pain,ICU patient,Minor alert
+03:20:00,Normal,70,115,77,17,97.9,37.2,2,Chest pain,Elderly,None
+03:21:00,Normal,67,120,75,14,97.6,36.9,1,Dyspnea,On oxygen,None
+03:22:00,Normal,75,122,80,15,97.5,37,1,Sepsis,On oxygen,None
+03:23:00,Normal,71,124,77,17,97.4,36.8,3,Trauma,Post-op,None
+03:24:00,Normal,72,119,78,15,97.3,36.9,1,Chest pain,ICU patient,None
+03:25:00,Normal,72,118,77,15,97.4,36.7,2,Sepsis,Hypertensive,Minor alert
+03:26:00,Normal,81,122,76,17,96.9,36.6,0,Headache,ICU patient,None
+03:27:00,Normal,70,116,76,14,98.7,36.7,1,Headache,Post-op,Minor alert
+03:28:00,Normal,83,123,77,14,97.2,37,2,Dyspnea,Post-op,None
+03:29:00,Moderate,93,140,90,24,94,37.5,6,Fever,Unstable,Elevated BP alert
+03:30:00,Moderate,100,143,90,21,91.2,37.5,4,Sepsis,Diabetic,Low SpO2 warning
+03:31:00,Moderate,95,139,90,22,93.3,37.5,4,Headache,Unstable,Moderate tachycardia
+03:32:00,Moderate,96,137,91,23,94,37.8,6,Chest pain,Elderly,Low SpO2 warning
+03:33:00,Moderate,93,142,92,19,94.3,37.5,4,Trauma,Post-op,Moderate tachycardia
+03:34:00,Moderate,97,141,91,21,93.7,37.8,4,Fever,Unstable,Elevated BP alert
+03:35:00,Moderate,92,144,90,20,93.9,37.4,4,Chest pain,Post-op,Elevated BP alert
+03:36:00,Moderate,96,137,91,22,94.6,37.6,6,Headache,Diabetic,Low SpO2 warning
+03:37:00,Moderate,98,139,88,23,93.1,37.4,5,Dyspnea,Elderly,Moderate tachycardia
+03:38:00,Moderate,95,139,91,22,94.5,37.5,4,Fever,Elderly,Low SpO2 warning
+03:39:00,Moderate,96,135,88,23,93.3,37.4,4,Chest pain,ICU patient,Moderate tachycardia
+03:40:00,Moderate,101,144,88,22,95,37.4,4,Abdominal pain,Unstable,Moderate tachycardia
+03:41:00,Moderate,98,139,91,22,93.6,37.3,5,Fever,Elderly,Elevated BP alert
+03:42:00,Moderate,94,141,88,22,92.7,37.5,6,Trauma,Post-op,Elevated BP alert
+03:43:00,Moderate,97,135,89,21,93.7,37.5,6,Abdominal pain,On oxygen,Low SpO2 warning
+03:44:00,Moderate,95,141,93,21,92.6,37.5,5,Trauma,Elderly,Low SpO2 warning
+03:45:00,Moderate,100,143,88,23,94.2,37.2,4,Trauma,Elderly,Moderate tachycardia
+03:46:00,Moderate,103,137,88,23,93.6,37.4,4,Trauma,Post-op,Elevated BP alert
+03:47:00,Moderate,94,142,91,22,94.6,37.4,5,Dyspnea,On oxygen,Low SpO2 warning
+03:48:00,Moderate,96,142,90,24,92.7,37.7,6,Sepsis,Unstable,Low SpO2 warning
+03:49:00,Moderate,98,141,86,22,95.5,37.6,5,Fever,Unstable,Low SpO2 warning
+03:50:00,Moderate,96,141,90,22,92.7,37.4,4,Headache,Unstable,Moderate tachycardia
+03:51:00,Moderate,95,134,91,21,91.8,37.8,6,Sepsis,Elderly,Moderate tachycardia
+03:52:00,Moderate,98,141,88,22,94.9,37.6,6,Dyspnea,Post-op,Moderate tachycardia
+03:53:00,Moderate,96,140,91,22,94.6,38,4,Abdominal pain,ICU patient,Elevated BP alert
+03:54:00,Moderate,97,144,90,23,93.5,37.8,5,Trauma,Elderly,Low SpO2 warning
+03:55:00,Moderate,99,141,89,21,92.8,37.5,5,Fever,Diabetic,Moderate tachycardia
+03:56:00,Moderate,100,137,90,22,95,37.5,4,Chest pain,Diabetic,Moderate tachycardia
+03:57:00,Moderate,99,143,90,23,93.4,37.7,5,Dyspnea,ICU patient,Low SpO2 warning
+03:58:00,Moderate,92,142,92,22,92.8,37.7,6,Headache,Elderly,Low SpO2 warning
+03:59:00,Moderate,97,141,90,20,93.3,37.3,6,Fever,Diabetic,Elevated BP alert
+04:00:00,Moderate,96,143,92,22,93.2,37.7,6,Trauma,Unstable,Low SpO2 warning
+04:01:00,Moderate,97,140,89,20,95.1,37.4,6,Sepsis,ICU patient,Moderate tachycardia
+04:02:00,Moderate,91,139,91,22,95,37.5,5,Dyspnea,Post-op,Elevated BP alert
+04:03:00,Moderate,97,141,89,22,93.6,37.2,6,Chest pain,Unstable,Moderate tachycardia
+04:04:00,Moderate,94,138,92,24,91.9,37.1,6,Trauma,ICU patient,Low SpO2 warning
+04:05:00,Moderate,96,145,89,23,94,37.1,4,Sepsis,Post-op,Low SpO2 warning
+04:06:00,Moderate,99,147,90,21,93.2,37.3,5,Sepsis,Elderly,Elevated BP alert
+04:07:00,Moderate,95,140,91,23,94,37.8,6,Dyspnea,On oxygen,Elevated BP alert
+04:08:00,Moderate,97,138,93,23,92.4,37.7,4,Dyspnea,Unstable,Low SpO2 warning
+04:09:00,Moderate,100,143,90,23,93.2,37.6,6,Abdominal pain,Post-op,Low SpO2 warning
+04:10:00,Moderate,98,134,92,22,93.1,37,6,Chest pain,ICU patient,Low SpO2 warning
+04:11:00,Moderate,97,138,90,23,94,37.5,4,Trauma,Diabetic,Elevated BP alert
+04:12:00,Moderate,97,141,90,22,93.4,37.4,6,Trauma,Diabetic,Elevated BP alert
+04:13:00,Moderate,95,135,90,21,95.3,37.4,5,Chest pain,Unstable,Low SpO2 warning
+04:14:00,Moderate,99,139,92,22,93.1,37.7,6,Dyspnea,Elderly,Low SpO2 warning
+04:15:00,Moderate,99,142,89,22,94,37.8,4,Headache,Hypertensive,Moderate tachycardia
+04:16:00,Moderate,92,141,92,23,92.7,37.8,4,Chest pain,On oxygen,Low SpO2 warning
+04:17:00,High,116,157,101,29,86.7,38.8,8,Headache,Post-op,CRITICAL: Hypoxia
+04:18:00,High,124,170,100,31,89.8,38.4,8,Headache,ICU patient,CRITICAL: Tachycardia
+04:19:00,High,130,156,103,28,88.9,38.6,10,Trauma,Hypertensive,CRITICAL: Tachycardia
+04:20:00,High,124,163,105,29,89.1,38.5,10,Fever,ICU patient,CRITICAL: Hypotension
+04:21:00,High,132,177,106,31,88.2,38.1,10,Fever,Post-op,CRITICAL: Hypoxia
+04:22:00,High,126,160,104,28,88.8,38.2,9,Dyspnea,Hypertensive,CRITICAL: Tachycardia
+04:23:00,High,122,171,104,31,87.6,38.3,7,Trauma,Hypertensive,CRITICAL: Hypoxia
+04:24:00,High,121,167,101,30,86.8,38.6,10,Dyspnea,Diabetic,CRITICAL: Hypoxia
+04:25:00,High,123,158,101,32,87.3,38.5,10,Abdominal pain,On oxygen,CRITICAL: Tachycardia
+04:26:00,High,125,158,104,31,87,38.4,10,Sepsis,Unstable,CRITICAL: Tachycardia
+04:27:00,High,121,165,102,29,88.2,38.5,10,Chest pain,On oxygen,CRITICAL: Hypoxia
+04:28:00,High,129,175,105,30,89.6,38.8,7,Headache,On oxygen,CRITICAL: Hypoxia
+04:29:00,High,130,169,101,31,89.7,38.8,9,Fever,Elderly,CRITICAL: Hypotension
+04:30:00,High,125,155,104,31,87.4,38.4,9,Sepsis,Elderly,CRITICAL: Hypoxia
+04:31:00,High,120,170,103,31,88.2,38.3,7,Abdominal pain,Hypertensive,CRITICAL: Tachycardia
+04:32:00,High,115,169,103,28,86.8,38.5,10,Headache,ICU patient,CRITICAL: Hypotension
+04:33:00,High,123,162,104,30,88.2,38.3,7,Trauma,ICU patient,CRITICAL: Hypotension
+04:34:00,High,131,169,103,31,88,38.5,10,Trauma,Diabetic,CRITICAL: Hypotension
+04:35:00,High,129,166,101,30,87.6,38.4,9,Abdominal pain,Elderly,CRITICAL: Hypotension
+04:36:00,High,118,164,105,30,88.3,38.6,9,Sepsis,Hypertensive,CRITICAL: Tachycardia
+04:37:00,High,125,165,100,32,88.2,38.4,7,Trauma,ICU patient,CRITICAL: Tachycardia
+04:38:00,High,124,169,102,31,87.5,38.4,9,Sepsis,Unstable,CRITICAL: Tachycardia
+04:39:00,High,132,160,102,31,89.4,38.5,9,Trauma,Elderly,CRITICAL: Hypoxia
+04:40:00,High,119,162,98,30,86.3,38.3,10,Trauma,Diabetic,CRITICAL: Hypotension
+04:41:00,High,126,159,101,32,86.6,38.2,10,Fever,On oxygen,CRITICAL: Tachycardia
+04:42:00,High,126,162,102,29,88,38.2,9,Chest pain,Elderly,CRITICAL: Hypotension
+04:43:00,High,127,172,102,28,87.3,38.6,10,Chest pain,Post-op,CRITICAL: Hypotension
+04:44:00,High,114,169,101,30,86.1,38.3,7,Fever,On oxygen,CRITICAL: Tachycardia
+04:45:00,Normal,70,123,74,15,98.6,36.4,3,Headache,Hypertensive,Minor alert
+04:46:00,Normal,77,121,78,13,97.7,37,2,Fever,Elderly,None
+04:47:00,Normal,62,126,79,18,99.1,37.1,0,Fever,Diabetic,Minor alert
+04:48:00,Normal,73,123,76,13,97.5,36.9,0,Trauma,ICU patient,None
+04:49:00,Normal,83,120,80,16,98.4,36.8,3,Fever,Unstable,Minor alert
+04:50:00,Normal,82,116,78,14,97.4,36.7,3,Chest pain,On oxygen,None
+04:51:00,Normal,62,119,78,17,99.6,37.3,1,Fever,Unstable,Minor alert
+04:52:00,Normal,73,116,76,17,98.1,36.7,2,Dyspnea,Post-op,None
+04:53:00,Normal,65,122,77,13,100.5,37,3,Fever,Elderly,Minor alert
+04:54:00,Normal,77,124,75,16,95.9,36.7,0,Fever,Unstable,Minor alert
+04:55:00,Normal,70,117,79,16,98.4,37.1,0,Trauma,Post-op,Minor alert
+04:56:00,Normal,82,119,77,14,99.9,36.6,2,Dyspnea,Hypertensive,Minor alert
+04:57:00,Normal,74,122,76,18,99.1,37,3,Sepsis,ICU patient,Minor alert
+04:58:00,Normal,75,112,79,16,98.5,37.6,2,Trauma,Hypertensive,None
+04:59:00,Normal,67,122,75,16,97.6,36.4,0,Sepsis,On oxygen,None
