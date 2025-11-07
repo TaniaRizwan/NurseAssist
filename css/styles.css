@@ -1,6 +1,6 @@
 
 body {
-    background-image: url("images/TriageAR_Background.png");
+    background-image: url("../assets/TriageAR_Background.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -30,4 +30,18 @@ button {
 
 }
 
+.WelcomePages {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    background-color: #EAEAEA;
+    border: 1px solid #000000;
+
+    width: 25%;
+    height: 80px;
+
+    text-align: center;
+    font-size: x-large;
+}
 
