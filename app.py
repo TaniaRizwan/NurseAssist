@@ -1,5 +1,5 @@
-from flask import Flask, render_template, jsonify
-import csv, threading, time, os
+from flask import Flask, render_template, jsonify, Response
+import csv, threading, time, cv2
 
 # Flask setup
 app = Flask(__name__, template_folder='.', static_folder='.')
@@ -11,20 +11,56 @@ with open(csv_file, newline='') as f:
     stress_data = reader
 
 # Shared state between thread and Flask routes
-state = {"Stress_Level": "Normal", "Heart_Rate": "78"}
+state = {
+    "Face_Detected": False,
+    "Stress_State": stress_data[0]["Stress_State"],
+    "Heart_Rate_bpm": stress_data[0]["Heart_Rate_bpm"],
+    "HR_Threshold_Label": stress_data[0]["HR_Threshold_Label"],
+    "Gaze_State": stress_data[0]["Gaze_State"],
+    "Gaze_Metric_0_1": stress_data[0]["Gaze_Metric_0_1"],
+    "Step_Trend": stress_data[0]["Step_Trend"]
+}
+
 index = {"i": 0}
 
-# Background thread to simulate time flow
-def simulate_data():
+# Time simulation 
+def simulate_csv_timeline():
     while True:
         row = stress_data[index["i"]]
-        state["Stress_Level"] = row.get("Stress_Level", "Normal")
-        state["Heart_Rate"] = row.get("Heart_Rate", "80")
-        index["i"] = (index["i"] + 1) % len(stress_data)
-        time.sleep(2)  # update interval in seconds
 
-# Start background simulation thread
-threading.Thread(target=simulate_data, daemon=True).start()
+        state["Stress_State"] = row["Stress_State"]
+        state["Heart_Rate_bpm"] = row["Heart_Rate_bpm"]
+        state["HR_Threshold_Label"] = row["HR_Threshold_Label"]
+        state["Gaze_State"] = row["Gaze_State"]
+        state["Gaze_Metric_0_1"] = row["Gaze_Metric_0_1"]
+        state["Step_Trend"] = row["Step_Trend"]
+
+        index["i"] = (index["i"] + 1) % len(stress_data)
+
+        time.sleep(2)  # simulate 1 minute every 2 seconds
+
+threading.Thread(target=simulate_csv_timeline, daemon=True).start()
+
+#Face Detection Thread
+face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+cap = cv2.VideoCapture(0)
+
+def detect_faces():
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            continue
+
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+
+        state["Face_Detected"] = len(faces) > 0
+
+        time.sleep(0.5)
+
+threading.Thread(target=detect_faces, daemon=True).start()
+
+
 
 # Routes for pages
 @app.route('/')
