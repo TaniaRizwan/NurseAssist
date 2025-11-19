@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>NurseAssist – Real-Time Nurse State</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        body {font-family: Arial, sans-serif;}
+        #infoBox {
+            display:none; 
+            background:white; 
+            padding:10px; 
+            border-radius:8px; 
+            width:300px; 
+            border:1px solid #ccc;
+        }
+        h1 { font-size: 22px; }
+    </style>
+</head>
+
+<body>
+
+<h1>NurseAssist – Nurse Status Monitor</h1>
+<p id="scanStatus"><strong>Waiting for person...</strong></p>
+
+<div id="infoBox">
+    <p>Stress: <span id="Stress_State"></span></p>
+    <p>Heart Rate: <span id="Heart_Rate_bpm"></span> bpm</p>
+    <p>HR Label: <span id="HR_Threshold_Label"></span></p>
+    <p>Gaze: <span id="Gaze_State"></span></p>
+</div>
+
+<script>
+setInterval(() => {
+    fetch('/get_stress_data')
+        .then(res => res.json())
+        .then(data => {
+
+            if (data.Face_Detected) {
+                document.getElementById("scanStatus").innerText = "Person detected ✓";
+                document.getElementById("infoBox").style.display = "block";
+
+                document.getElementById("Stress_State").innerText = data.Stress_State;
+                document.getElementById("Heart_Rate_bpm").innerText = data.Heart_Rate_bpm;
+                document.getElementById("HR_Threshold_Label").innerText = data.HR_Threshold_Label;
+                document.getElementById("Gaze_State").innerText = data.Gaze_State;
+
+                // Background color based on HR severity
+                const level = data.HR_Threshold_Label;
+                document.body.style.backgroundColor =
+                    level === "High" ? "#ffb3b3" :
+                    level === "Moderate" ? "#ffeeba" :
+                    "#d4edda";
+            } 
+            else {
+                document.getElementById("scanStatus").innerText = "Waiting for person...";
+                document.getElementById("infoBox").style.display = "none";
+                document.body.style.backgroundColor = "white";
+            }
+        });
+}, 1000);
+</script>
+
+</body>
+</html>
