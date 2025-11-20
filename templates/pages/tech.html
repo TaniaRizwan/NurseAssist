@@ -7,10 +7,114 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <!-- Rectangular frame with webcam -->
-     <div class="video-container">
+    <!-- Camera Stream -->
+    <div class="VideoContainer">
         <img src="/video_feed" id="videoStream">
-     </div>
+    </div>
+
+    <!-- ⭐ ALWAYS VISIBLE — condition badge -->
+    <div id="ConditionBadge" class="condition-badge">
+        <div class="light"></div>
+        <div class="text">
+            Your condition: <span id="ConditionStatus">Normal</span><br>
+            <span id="ConditionMetrics">HR: 97 &nbsp; Gaze: shifting &nbsp; Step: 30</span>
+        </div>
+    </div>
+
+    <!-- ⭐ TIER 1 -->
+    <div id="Tier1" class="tier-container" style="display:none;">
+        <div class="tier-box">
+
+            <div class="tier-header">
+                <span><b>Jane Doe</b> · 54F · Arrived by EMS (10:42 AM)</span>
+                <span>CTAS 2 &nbsp;&nbsp; Time remains <b>00:14:53</b></span>
+            </div>
+
+            <div class="tier-section">
+                Chief Complaint: Chest pain since 1 hour ago <br>
+                CEDIS: Chest Pain – Cardiac (101)
+            </div>
+
+            <div class="tier-grid">
+                <div><span class="label">HR</span><br>128</div>
+                <div><span class="label">BP</span><br>92/58</div>
+                <div><span class="label">RR</span><br>26</div>
+                <div><span class="label">SpO₂</span><br>87%</div>
+                <div><span class="label">Temp</span><br>37.3°C</div>
+                <div><span class="label">Pain</span><br>8/10</div>
+            </div>
+
+            <div class="tier-section">
+                Modifiers: Tachycardia, Hypotension, Severe Pain<br>
+                Triage Nurse ID: 251062
+            </div>
+
+            <div class="tier-section">
+                Alarm: Missing triage note
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ⭐ TIER 2 -->
+    <div id="Tier2" class="tier-container" style="display:none;">
+        <div class="tier-box">
+            <div class="tier-header">
+                <span><b>Jane Doe</b> · 54F · CTAS 2</span>
+                <span>Timer <b>00:14:53</b></span>
+            </div>
+
+            <div class="tier-section">
+                CEDIS: Chest Pain – Cardiac (101)
+            </div>
+
+            <div class="tier-grid">
+                <div><span class="label">HR</span><br>162</div>
+                <div><span class="label">BP</span><br>92/58</div>
+                <div><span class="label">SpO₂</span><br>87%</div>
+            </div>
+
+            <div class="tier-section">
+                Modifiers: Tachycardia, Hypotension
+            </div>
+
+            <div class="tier-section">
+                Alarm: abnormal HR
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ⭐ TIER 3 -->
+    <div id="Tier3" class="tier-container" style="display:none;">
+        <div class="tier-box">
+            <div class="tier-header">
+                <span><b>Jane Doe</b></span>
+                <span>CTAS 2</span>
+            </div>
+
+            <div class="tier-section">
+                CEDIS: Chest Pain – Cardiac (101)
+            </div>
+
+            <div class="tier-grid">
+                <div><span class="label">BP</span><br>92/58</div>
+                <div><span class="label">SpO₂</span><br>87%</div>
+            </div>
+
+            <div class="tier-section">
+                Modifiers: Tachycardia, Hypotension
+            </div>
+
+            <div class="tier-section">
+                Alarm: abnormal HR
+            </div>
+        </div>
+    </div>
+
+     <!-- <div id="triageInfo" class="triage-box"></div> -->
 </body>
 <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </html>
