@@ -10,22 +10,28 @@
     <!-- Camera Stream -->
     <div class="VideoContainer">
         <img src="/video_feed" id="videoStream">
-    </div>
+    
 
-    <!-- ⭐ ALWAYS VISIBLE — condition badge -->
-    <div id="ConditionBadge" class="condition-badge">
-        <div class="light"></div>
-        <div class="text">
+    <!-- Nurse Condition Badge -->
+    <div class="ConditionBadge">
+        <!-- Toggle Switch -->
+        <label class="Toggle">
+            <input type="checkbox" id="FeatureToggle" checked>
+            <span class="Slider"></span>
+        </label>
+
+        <!-- Text -->
+        <div>
             Your condition: <span id="ConditionStatus">Normal</span><br>
-            <span id="ConditionMetrics">HR: 97 &nbsp; Gaze: shifting &nbsp; Step: 30</span>
+            <span id="ConditionMetrics">HR: 97 &nbsp; Gaze: shifting &nbsp; Steps: Baseline</span>
         </div>
     </div>
 
     <!-- ⭐ TIER 1 -->
-    <div id="Tier1" class="tier-container" style="display:none;">
-        <div class="tier-box">
+    <div id="Tier1" class="TierContainer" style="display:none;">
+        <div class="TierBox">
 
-            <div class="tier-header">
+            <div class="TierHeader">
                 <span><b>Jane Doe</b> · 54F · Arrived by EMS (10:42 AM)</span>
                 <span>CTAS 2 &nbsp;&nbsp; Time remains <b>00:14:53</b></span>
             </div>
@@ -58,9 +64,9 @@
 
 
     <!-- ⭐ TIER 2 -->
-    <div id="Tier2" class="tier-container" style="display:none;">
-        <div class="tier-box">
-            <div class="tier-header">
+    <div id="Tier2" class="TierContainer" style="display:none;">
+        <div class="TierBox">
+            <div class="TierHeader">
                 <span><b>Jane Doe</b> · 54F · CTAS 2</span>
                 <span>Timer <b>00:14:53</b></span>
             </div>
@@ -88,9 +94,9 @@
 
 
     <!-- ⭐ TIER 3 -->
-    <div id="Tier3" class="tier-container" style="display:none;">
-        <div class="tier-box">
-            <div class="tier-header">
+    <div id="Tier3" class="TierContainer" style="display:none;">
+        <div class="TierBox">
+            <div class="TierHeader">
                 <span><b>Jane Doe</b></span>
                 <span>CTAS 2</span>
             </div>
@@ -112,6 +118,7 @@
                 Alarm: abnormal HR
             </div>
         </div>
+    </div>
     </div>
 
      <!-- <div id="triageInfo" class="triage-box"></div> -->

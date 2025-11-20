@@ -43,6 +43,21 @@ if (loginBtn) {
     });
 }
 
+// Toggle System
+let tierFeatureEnabled = true; 
+
+document.getElementById("FeatureToggle").addEventListener("change", (evt) => {
+    tierFeatureEnabled = evt.target.checked;
+
+    if (!tierFeatureEnabled) {
+        // Hide all tiers
+        document.getElementById("Tier1").style.display = "none";
+        document.getElementById("Tier2").style.display = "none";
+        document.getElementById("Tier3").style.display = "none";
+    }
+});
+
+
 // Tier Switching
 setInterval(() => {
     fetch('/get_stress_data')
@@ -56,8 +71,11 @@ setInterval(() => {
                  Gaze: ${data.Gaze_State} &nbsp;
                  Step: ${data.Step_Trend}`;
 
-            // Hide all tiers
-            document.getElementById("Tier1").style.display = "none";
+            // if toggle is OFF -> dont show tiers
+            if (!tierFeatureEnabled) return; 
+
+            // Otherwise, show appropriate tier
+            document.getElementById("Tier1").style.display = "none"; // Begin by hiding all tiers so we can display based on threshold
             document.getElementById("Tier2").style.display = "none";
             document.getElementById("Tier3").style.display = "none";
 
