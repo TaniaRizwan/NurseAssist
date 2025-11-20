@@ -42,25 +42,33 @@ def simulate_csv_timeline():
 threading.Thread(target=simulate_csv_timeline, daemon=True).start()
 
 #Face Detection Thread
-# face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-# cap = cv2.VideoCapture(0)
+def detect_faces():
+    face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+    cap = cv2.VideoCapture(0)
 
-# def detect_faces():
-#     while True:
-#         ret, frame = cap.read()
-#         if not ret:
-#             continue
+    t = 0 # timeline counter
 
-#         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-#         faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break
 
-#         state["Face_Detected"] = len(faces) > 0
+        # ---- FACE DETECTION ----
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+        state["Face_Detected"] = len(faces) > 0
 
-#         time.sleep(0.5)
+        # ---- STREAM FRAME ----
+        ret, buffer = cv2.imencode('.jpg', frame) # Converts image frames into streaming data and stores in cache.
+        frame_bytes = buffer.tobytes()  # Convert frame to bytes
 
-# threading.Thread(target=detect_faces, daemon=True).start()
+        yield(b'--frame\r\n'
+              b'Content-Type: image/jpeg\r\n\r\n' + frame_bytes + b'\r\n') # Display frame
+        
+        t += 1
+        time.sleep(0.03)
 
-
+threading.Thread(target=detect_faces, daemon=True).start()
 
 # Routes for pages
 @app.route('/')
@@ -78,6 +86,10 @@ def signin():
 @app.route('/tech')
 def tech():
     return render_template('pages/tech.html')
+
+@app.route('/video_feed') # Streams webcame to browser
+def video_feed():
+    return Response(detect_faces(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 # Route to send current simulated data
 @app.route('/get_stress_data')
