@@ -2,21 +2,21 @@
 const aboutBtn = document.getElementById("AboutBtn");
 if (aboutBtn) {
     aboutBtn.addEventListener("click", () => {
-    window.location.href = "../pages/about.html"
+    window.location.href = "/about" // Route via flask
     });
 }
 
 const SignInBtn = document.getElementById("SignInBtn");
 if (SignInBtn) {
     SignInBtn.addEventListener("click", () => {
-        window.location.href = "../pages/signin.html"
+        window.location.href = "/signin"
     });
 }
 
 const BackBtn = document.getElementById("BackBtn");
 if (BackBtn) {
     BackBtn.addEventListener("click", () => {
-        window.location.href = "../index.html"
+        window.location.href = "/"
     });
 }
 
@@ -36,7 +36,7 @@ if (loginBtn) {
 
         if (nurseId === validNurseID && password === validPassword) {
             alert("Login successful!");
-            window.location.href = "../pages/tech.html";
+            window.location.href = "/tech";
         } else {
             alert("Please enter valid credentials!");
         }

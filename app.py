@@ -2,10 +2,10 @@ from flask import Flask, render_template, jsonify, Response
 import csv, threading, time, cv2
 
 # Flask setup
-app = Flask(__name__, template_folder='.', static_folder='.')
+app = Flask(__name__, template_folder='templates', static_folder='static')
 
 # Load nurse stress dataset
-csv_file = r"Data\Nurse_Stress_Data(Sheet1).csv" 
+csv_file = r"static/data/Nurse_Stress_Data(Sheet1).csv" 
 with open(csv_file, newline='') as f:
     reader = list(csv.DictReader(f))
     stress_data = reader
@@ -42,23 +42,23 @@ def simulate_csv_timeline():
 threading.Thread(target=simulate_csv_timeline, daemon=True).start()
 
 #Face Detection Thread
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-cap = cv2.VideoCapture(0)
+# face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+# cap = cv2.VideoCapture(0)
 
-def detect_faces():
-    while True:
-        ret, frame = cap.read()
-        if not ret:
-            continue
+# def detect_faces():
+#     while True:
+#         ret, frame = cap.read()
+#         if not ret:
+#             continue
 
-        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+#         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+#         faces = face_cascade.detectMultiScale(gray, 1.3, 5)
 
-        state["Face_Detected"] = len(faces) > 0
+#         state["Face_Detected"] = len(faces) > 0
 
-        time.sleep(0.5)
+#         time.sleep(0.5)
 
-threading.Thread(target=detect_faces, daemon=True).start()
+# threading.Thread(target=detect_faces, daemon=True).start()
 
 
 
@@ -66,6 +66,14 @@ threading.Thread(target=detect_faces, daemon=True).start()
 @app.route('/')
 def home():
     return render_template('index.html')
+
+@app.route('/about')
+def about():
+    return render_template('pages/about.html')
+
+@app.route('/signin')
+def signin():
+    return render_template('pages/signin.html')
 
 @app.route('/tech')
 def tech():
