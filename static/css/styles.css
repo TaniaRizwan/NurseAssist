@@ -66,6 +66,31 @@ button {
     height: 100%;
     margin: 0%;
     justify-content: center;
+    display: block;
+    z-index: 1;
+}
+
+.ConditionBadge, .scanStatus, .TierContainer {
+    position: absolute;
+    z-index: 10; /* Keeps overlays above video */
+}
+
+/* ---- SCAN STATUS ---- */
+
+.scanStatus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px 25px;
+    font-size: 30px;
+    font-family: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    display: none; /* Hide until needed */
+    z-index: 50;
 }
 
 /* ---------------- CONDITION BADGE ---------------- */

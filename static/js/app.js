@@ -64,30 +64,52 @@ setInterval(() => {
         .then(res => res.json())
         .then(data => {
 
-            // Update badge
-            document.getElementById("ConditionStatus").innerText = data.Stress_State;
-            document.getElementById("ConditionMetrics").innerHTML =
-                `HR: ${data.Heart_Rate_bpm} &nbsp; 
-                 Gaze: ${data.Gaze_State} &nbsp;
-                 Step: ${data.Step_Trend}`;
+            const scanStatus = document.getElementById("scanStatus");
+            const conditionBadge = document.getElementById("ConditionBadge");
 
-            // if toggle is OFF -> dont show tiers
-            if (!tierFeatureEnabled) return; 
+            conditionBadge.style.display = "flex"; // Show condition badge
 
-            // Otherwise, show appropriate tier
-            document.getElementById("Tier1").style.display = "none"; // Begin by hiding all tiers so we can display based on threshold
+            // Hide all tiers initially
+            document.getElementById("Tier1").style.display = "none"; 
             document.getElementById("Tier2").style.display = "none";
             document.getElementById("Tier3").style.display = "none";
 
-            // Show correct tier
-            if (data.HR_Threshold_Label === "Normal") 
-                document.getElementById("Tier1").style.display = "block";
 
-            else if (data.HR_Threshold_Label === "Moderate") 
-                document.getElementById("Tier2").style.display = "block";
+            if (data.Face_Detected) {
+                // Face detected mode 
 
-            else 
-                document.getElementById("Tier3").style.display = "block";
+                scanStatus.style.display = "none";  // Hide waiting box
+                // conditionBadge.style.display = "flex"; // Show condition badge
+
+                // Update badge text
+                document.getElementById("ConditionStatus").innerText = data.Stress_State;
+                document.getElementById("ConditionMetrics").innerHTML =
+                    `HR: ${data.Heart_Rate_bpm} &nbsp; 
+                    Gaze: ${data.Gaze_State} &nbsp;
+                    Step: ${data.Step_Trend}`;
+
+                // if toggle is OFF -> dont show tiers
+                if (!tierFeatureEnabled) return; 
+
+                // Otherwise, show correct tier
+                if (data.HR_Threshold_Label === "Normal") 
+                    document.getElementById("Tier1").style.display = "block";
+
+                else if (data.HR_Threshold_Label === "Moderate") 
+                    document.getElementById("Tier2").style.display = "block";
+
+                else 
+                    document.getElementById("Tier3").style.display = "block";
+
+            } else {
+
+                // No face detected mode
+                scanStatus.style.display = "block"; // Show waiting message
+                scanStatus.innerText = "No Patient Detected";
+
+                // conditionBadge.style.display = "none"; // Hide condition badge
+                // Tier boxes already hidden above
+            }
         });
 }, 800);
 

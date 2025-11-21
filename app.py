@@ -51,12 +51,16 @@ def detect_faces():
     while True:
         ret, frame = cap.read()
         if not ret:
-            break
+            continue
 
         # ---- FACE DETECTION ----
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         faces = face_cascade.detectMultiScale(gray, 1.3, 5)
         state["Face_Detected"] = len(faces) > 0
+
+        # # ---- DRAW BOUNDING BOX (DEV ONLY) ----
+        # for (x, y, w, h) in faces:
+        #     cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 4)
 
         # ---- STREAM FRAME ----
         ret, buffer = cv2.imencode('.jpg', frame) # Converts image frames into streaming data and stores in cache.
@@ -67,8 +71,6 @@ def detect_faces():
         
         t += 1
         time.sleep(0.03)
-
-threading.Thread(target=detect_faces, daemon=True).start()
 
 # Routes for pages
 @app.route('/')
