@@ -166,10 +166,25 @@ button {
     backdrop-filter: blur(8px);
     background: rgba(0,0,0,0.55);
     padding: 20px 25px;
-    width: 420px;
+    /* width: 420px; */
     border-radius: 12px;
     color: white;
     font-family: Arial;
+}
+
+#Tier1 .TierBox {
+    width: 420px;
+}
+
+#Tier2 .TierBox {
+    width: 340px;
+}
+
+#Tier3 .TierBox {
+    width: 260px;
+    aspect-ratio: 1/1; 
+    display: flex;
+    
 }
 
 
@@ -183,17 +198,47 @@ button {
     margin-bottom: 15px;
 }
 
+.TierHeaderRow {
+    background: #b40000;
+    padding: 10px 15px;
+    border-radius: 8px 8px 0 0;
+}
+
+.TierHeaderRow1 {
+    display: flex;
+    gap: 6px;
+    font-size: 16px;
+}
+
+.TierHeaderRow2 {
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
 
 /* BODY TEXT & GRID */
+.tierBlock {
+    margin: 0;
+    padding: 4px 0;
+}
+
+.TierHeaderRow + .tierBlock {
+    border-top: 1px solid rgba(255, 255, 255, 0.2)
+}
+
+.tierBlock + .tierBlock {
+    border-top: 1px solid rgba(255, 255, 255, 0.2)
+}
+
 .tier-section {
-    margin-bottom: 15px;
     line-height: 22px;
 }
 
 .tier-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    margin-bottom: 15px;
     text-align: center;
 }
 
