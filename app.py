@@ -87,7 +87,7 @@ def signin():
 
 @app.route('/tech')
 def tech():
-    return render_template('pages/tech.html')
+    return render_template('pages/tech.html', time=time)
 
 @app.route('/video_feed') # Streams webcame to browser
 def video_feed():
@@ -100,6 +100,6 @@ def get_stress_data():
 
 # Run the app
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, threaded=True)
 
     

@@ -1,4 +1,5 @@
 
+// ---- BUTTON NAVIGATION ----
 const aboutBtn = document.getElementById("AboutBtn");
 if (aboutBtn) {
     aboutBtn.addEventListener("click", () => {
@@ -20,7 +21,7 @@ if (BackBtn) {
     });
 }
 
-// Dummy credentials
+// ---- LOGIN ----
 const validNurseID = "123456";
 const validPassword = "Password123";
 const loginBtn = document.getElementById("loginBtn");
@@ -43,7 +44,7 @@ if (loginBtn) {
     });
 }
 
-// Toggle System
+// ---- TOGGLE SYSTEM ----
 let tierFeatureEnabled = true; 
 
 document.getElementById("FeatureToggle").addEventListener("change", (evt) => {
@@ -58,7 +59,7 @@ document.getElementById("FeatureToggle").addEventListener("change", (evt) => {
 });
 
 
-// Tier Switching
+// ---- TIER DISPLAY ----
 setInterval(() => {
     fetch('/get_stress_data')
         .then(res => res.json())
@@ -76,9 +77,9 @@ setInterval(() => {
 
 
             if (data.Face_Detected) {
-                // Face detected mode 
-
-                scanStatus.style.display = "none";  // Hide waiting box
+                
+                // Hide waiting message
+                scanStatus.style.display = "none";  
                 // conditionBadge.style.display = "flex"; // Show condition badge
 
                 // Update badge text
@@ -92,18 +93,25 @@ setInterval(() => {
                 if (!tierFeatureEnabled) return; 
 
                 // Otherwise, show correct tier
-                if (data.HR_Threshold_Label === "Normal") 
+                if (data.Stress_State === "Normal") {
                     document.getElementById("Tier1").style.display = "block";
+                    document.getElementById("Tier2").style.display = "none"; // Add safeguards to ensure other tiers don't popup
+                    document.getElementById("Tier3").style.display = "none"; 
 
-                else if (data.HR_Threshold_Label === "Moderate") 
-                    document.getElementById("Tier2").style.display = "block";
+                } else if (data.Stress_State === "Moderate") {
+                    document.getElementById("Tier1").style.display = "none";
+                    document.getElementById("Tier2").style.display = "block"; 
+                    document.getElementById("Tier3").style.display = "none";
 
-                else 
+                } else {
+                    document.getElementById("Tier1").style.display = "none";
+                    document.getElementById("Tier2").style.display = "none";
                     document.getElementById("Tier3").style.display = "block";
+                }
 
             } else {
-
-                // No face detected mode
+                // No face detected 
+                // Show waiting message
                 scanStatus.style.display = "block"; // Show waiting message
                 scanStatus.innerText = "No Patient Detected";
 
