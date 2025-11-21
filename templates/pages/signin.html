@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TriageAR</title>
-        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     </head>
     <body>
         <div>
-            <img src="../assets/Logo.png" alt="TriageAR"/>
+            <img class="Logo" src="{{ url_for('static', filename='assets/Logo.png') }}" alt="TriageAR"/>
         </div>
         <div>
             <input type="text" id="nurseID" class="WelcomePages" placeholder="Enter Nurse ID">
@@ -20,5 +20,5 @@
             <button id="loginBtn"><strong>Sign In</strong></button>
         </div>
     </body>
-    <script src="../js/app.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </html>

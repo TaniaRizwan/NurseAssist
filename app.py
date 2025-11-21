@@ -2,10 +2,10 @@ from flask import Flask, render_template, jsonify, Response
 import csv, threading, time, cv2
 
 # Flask setup
-app = Flask(__name__, template_folder='.', static_folder='.')
+app = Flask(__name__, template_folder='templates', static_folder='static')
 
 # Load nurse stress dataset
-csv_file = r"Data\Nurse_Stress_Data(Sheet1).csv" 
+csv_file = r"static/data/Nurse_Stress_Data(Sheet1).csv" 
 with open(csv_file, newline='') as f:
     reader = list(csv.DictReader(f))
     stress_data = reader
@@ -37,39 +37,61 @@ def simulate_csv_timeline():
 
         index["i"] = (index["i"] + 1) % len(stress_data)
 
-        time.sleep(2)  # simulate 1 minute every 2 seconds
+        time.sleep(0.2)  # simulate 1 minute every 2 seconds
 
 threading.Thread(target=simulate_csv_timeline, daemon=True).start()
 
 #Face Detection Thread
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-cap = cv2.VideoCapture(0)
-
 def detect_faces():
+    face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+    cap = cv2.VideoCapture(0)
+
+    t = 0 # timeline counter
+
     while True:
         ret, frame = cap.read()
         if not ret:
             continue
 
+        # ---- FACE DETECTION ----
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         faces = face_cascade.detectMultiScale(gray, 1.3, 5)
-
         state["Face_Detected"] = len(faces) > 0
 
-        time.sleep(0.5)
+        # # ---- DRAW BOUNDING BOX (DEV ONLY) ----
+        # for (x, y, w, h) in faces:
+        #     cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 4)
 
-threading.Thread(target=detect_faces, daemon=True).start()
+        # ---- STREAM FRAME ----
+        ret, buffer = cv2.imencode('.jpg', frame) # Converts image frames into streaming data and stores in cache.
+        frame_bytes = buffer.tobytes()  # Convert frame to bytes
 
-
+        yield(b'--frame\r\n'
+              b'Content-Type: image/jpeg\r\n\r\n' + frame_bytes + b'\r\n') # Display frame
+        
+        t += 1
+        time.sleep(0.03)
 
 # Routes for pages
 @app.route('/')
 def home():
     return render_template('index.html')
 
+@app.route('/about')
+def about():
+    return render_template('pages/about.html')
+
+@app.route('/signin')
+def signin():
+    return render_template('pages/signin.html')
+
 @app.route('/tech')
 def tech():
-    return render_template('pages/tech.html')
+    return render_template('pages/tech.html', time=time)
+
+@app.route('/video_feed') # Streams webcame to browser
+def video_feed():
+    return Response(detect_faces(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 # Route to send current simulated data
 @app.route('/get_stress_data')
@@ -78,6 +100,6 @@ def get_stress_data():
 
 # Run the app
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, threaded=True)
 
     

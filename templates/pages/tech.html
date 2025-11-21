@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NurseAssist</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Camera Stream -->
+    <div class="VideoContainer">
+        <!-- <img src="/video_feed" id="videoStream" > -->
+         <img src="" id="videoStream">
+        <!-- <img id="videoStream" src="/video_feed?cache_bust={{ time.time() }}"> -->
+
+        <!-- Face Detection -->
+        <div class="scanStatus" id="scanStatus">No Patient Detected</div> 
+        
+        <!-- Nurse Condition Badge -->
+        <div class="ConditionBadge" id="ConditionBadge">
+            <!-- Toggle Switch -->
+            <label class="Toggle">
+                <input type="checkbox" id="FeatureToggle" checked>
+                <span class="Slider"></span>
+            </label>
+
+            <!-- Text -->
+            <div>
+                Your condition: <span id="ConditionStatus">Normal</span><br>
+                <span id="ConditionMetrics">HR: 97 &nbsp; Gaze: shifting &nbsp; Steps: Baseline</span>
+            </div>
+        </div>
+
+        <!-- TIER 1 --> 
+        <div id="Tier1" class="TierContainer" style="display:none;">
+            <div class="TierBox">
+                
+                <div class="TierHeaderRow">
+                    <div class="TierHeaderRow1">
+                    <span><b>Jane Doe</b> · 54F · Arrived by EMS (10:42 AM)</span>
+                    </div>
+
+                    <div class="TierHeaderRow2">
+                        <span>CTAS 2</span>
+                        <span>Time remains <b>00:14:53</b></span>
+                    </div>
+                </div>
+
+                <div class="tierBlock tier-section">
+                    Chief Complaint: Chest pain since 1 hour ago <br>
+                    CEDIS: Chest Pain – Cardiac (101)
+                </div>
+
+                <div class="tierBlock tier-grid">
+                    <div><span class="label">HR</span><br>128</div>
+                    <div><span class="label">BP</span><br>92/58</div>
+                    <div><span class="label">RR</span><br>26</div>
+                    <div><span class="label">SpO₂</span><br>87%</div>
+                    <div><span class="label">Temp</span><br>37.3°C</div>
+                    <div><span class="label">Pain</span><br>8/10</div>
+                </div>
+
+                <div class="tierBlock tier-section">
+                    Modifiers: Tachycardia, Hypotension, Severe Pain<br>
+                    Triage Nurse ID: 251062
+                </div>
+
+                <div class="tierBlock tier-section">
+                    Alarm: Missing triage note
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- TIER 2 -->
+        <div id="Tier2" class="TierContainer" style="display:none;">
+            <div class="TierBox">
+
+                <div class="TierHeaderRow TierHeaderRow2">
+                    <span><b>Jane Doe</b> · 54F · CTAS 2</span>
+                    <span>Timer <b>00:14:53</b></span>
+                </div>
+
+                <div class="tierBlock tier-section">
+                    CEDIS: Chest Pain – Cardiac (101)
+                </div>
+
+                <div class="tierBlock tier-grid">
+                    <div><span class="label">HR</span><br>162</div>
+                    <div><span class="label">BP</span><br>92/58</div>
+                    <div><span class="label">SpO₂</span><br>87%</div>
+                </div>
+
+                <div class="tierBlock tier-section">
+                    Modifiers: Tachycardia, Hypotension
+                </div>
+
+                <div class="tierBlock tier-section">
+                    Alarm: abnormal HR
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- TIER 3 -->
+        <div id="Tier3" class="TierContainer" style="display:none;">
+            <div class="TierBox">
+                <div class="TierHeaderRow TierHeaderRow2">
+                    <span><b>Jane Doe</b></span>
+                    <span>CTAS 2</span>
+                </div>
+
+                <div class="tierBlock tier-section">
+                    CEDIS: Chest Pain – Cardiac (101)
+                </div>
+
+                <div class="tierBlock tier-grid">
+                    <div><span class="label">BP</span><br>92/58</div>
+                    <div><span class="label">SpO₂</span><br>87%</div>
+                </div>
+
+                <div class="tierBlock tier-section">
+                    Modifiers: Tachycardia, Hypotension
+                </div>
+
+                <div class="tierBlock tier-section">
+                    Alarm: abnormal HR
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="{{ url_for('static', filename='js/app.js') }}?v=4"></script>
+</html>
