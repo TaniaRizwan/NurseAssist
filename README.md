@@ -1,4 +1,4 @@
-# 📘 NurseAssist — README
+# 📘 TriageAR
 
 Welcome to **TriageAR**, an AI-enhanced triage decision-support interface built with **Flask**, **OpenCV**, **HTML5**, **CSS**, and **JavaScript**.
 TriageAR simulates an augmented-reality emergency department workflow designed to improve a nurse’s situational awareness by dynamically adapting the amount of information shown based on real-time stress indicators.
