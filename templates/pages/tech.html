@@ -10,7 +10,8 @@
     <!-- Camera Stream -->
     <div class="VideoContainer">
         <!-- <img src="/video_feed" id="videoStream" > -->
-        <img id="videoStream" src="/video_feed?cache_bust={{ time.time() }}">
+         <img src="" id="videoStream">
+        <!-- <img id="videoStream" src="/video_feed?cache_bust={{ time.time() }}"> -->
 
         <!-- Face Detection -->
         <div class="scanStatus" id="scanStatus">No Patient Detected</div> 
@@ -106,7 +107,7 @@
         <!-- TIER 3 -->
         <div id="Tier3" class="TierContainer" style="display:none;">
             <div class="TierBox">
-                <div class="TierHeader">
+                <div class="TierHeaderRow TierHeaderRow2">
                     <span><b>Jane Doe</b></span>
                     <span>CTAS 2</span>
                 </div>
@@ -132,5 +133,5 @@
     </div>
 
 </body>
-<script src="{{ url_for('static', filename='js/app.js') }}?v=3"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}?v=4"></script>
 </html>

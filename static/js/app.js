@@ -47,19 +47,29 @@ if (loginBtn) {
 // ---- TOGGLE SYSTEM ----
 let tierFeatureEnabled = true; 
 
-document.getElementById("FeatureToggle").addEventListener("change", (evt) => {
+const featureToggle = document.getElementById("FeatureToggle")
+if (featureToggle) {
+
+    featureToggle.addEventListener("change", (evt) => {
     tierFeatureEnabled = evt.target.checked;
 
-    if (!tierFeatureEnabled) {
-        // Hide all tiers
-        document.getElementById("Tier1").style.display = "none";
-        document.getElementById("Tier2").style.display = "none";
-        document.getElementById("Tier3").style.display = "none";
-    }
-});
+        if (!tierFeatureEnabled) {
+            // Hide all tiers
+            document.getElementById("Tier1").style.display = "none";
+            document.getElementById("Tier2").style.display = "none";
+            document.getElementById("Tier3").style.display = "none";
+        }
+    });
+}
+
 
 
 // ---- TIER DISPLAY ----
+const videoStream = document.getElementById("videoStream");
+if (videoStream) {
+    videoStream.src = "/video_feed?ts=" + Date.now();
+}
+
 setInterval(() => {
     fetch('/get_stress_data')
         .then(res => res.json())
@@ -87,7 +97,7 @@ setInterval(() => {
                 document.getElementById("ConditionMetrics").innerHTML =
                     `HR: ${data.Heart_Rate_bpm} &nbsp; 
                     Gaze: ${data.Gaze_State} &nbsp;
-                    Step: ${data.Step_Trend}`;
+                    Steps: ${data.Step_Trend}`;
 
                 // if toggle is OFF -> dont show tiers
                 if (!tierFeatureEnabled) return; 

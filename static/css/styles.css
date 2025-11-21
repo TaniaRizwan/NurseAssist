@@ -182,9 +182,6 @@ button {
 
 #Tier3 .TierBox {
     width: 260px;
-    aspect-ratio: 1/1; 
-    display: flex;
-    
 }
 
 
@@ -240,6 +237,32 @@ button {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     text-align: center;
+    width: 100%;
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+#Tier2 .tier-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#Tier3 .tier-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tier-grid > div {
+    padding: 6px 0;
+    position: relative;
+}
+
+.tier-grid > div:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 25%;
+    bottom: 25%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.25);
 }
 
 .tier-grid .label {

@@ -37,7 +37,7 @@ def simulate_csv_timeline():
 
         index["i"] = (index["i"] + 1) % len(stress_data)
 
-        time.sleep(2)  # simulate 1 minute every 2 seconds
+        time.sleep(0.2)  # simulate 1 minute every 2 seconds
 
 threading.Thread(target=simulate_csv_timeline, daemon=True).start()
 
